@@ -28,12 +28,10 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
-    /**
-     * The attributes that should be cast to native types.
-     *
-     * @var array
-     */
-    protected $casts = [
-        'email_verified_at' => 'datetime',
-    ];
+    function projects()
+    {
+        // return $this->hasMany(Project::class, 'owner_id')->orderBy('updated_at', 'desc');
+        // return $this->hasMany(Project::class, 'owner_id')->orderByDesc('updated_at');
+        return $this->hasMany(Project::class, 'owner_id')->latest('updated_at');
+    }
 }
