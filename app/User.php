@@ -34,4 +34,9 @@ class User extends Authenticatable
         // return $this->hasMany(Project::class, 'owner_id')->orderByDesc('updated_at');
         return $this->hasMany(Project::class, 'owner_id')->latest('updated_at');
     }
+
+    function comments()
+    {
+        return $this->hasMany(Comment::class, 'owner_id')->latest('updated_at');
+    }
 }

@@ -6225,6 +6225,20 @@ main .border-blue-light {
  * @import "utilities/skew-transforms";
  */
 
+body {
+  line-height: 1.5;
+  font-size: .9em;
+}
+
+body a {
+  color: #663763;
+  text-decoration: none;
+}
+
+body a:hover {
+  text-decoration: underline;
+}
+
 @media (min-width: 576px) {
   .sm\:list-reset {
     list-style: none;

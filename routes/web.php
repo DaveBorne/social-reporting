@@ -26,6 +26,9 @@ Route::group(['middleware' => 'auth'], function () {
 
     Route::resource('projects', 'ProjectsController');
 
+    Route::resource('/projects/{project}/comments', 'CommentsController');
+
+
     Route::post('/projects/{project}/tasks', 'ProjectTasksController@store');
     Route::patch('/projects/{project}/tasks/{task}', 'ProjectTasksController@update');
     // Route::patch('/tasks/{task}', 'ProjectTasksController@update');

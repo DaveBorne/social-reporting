@@ -6,10 +6,10 @@
     <div class="control">
 	    
 		<select name="platform_id" class="block appearance-none w-full bg-transparent border border-grey-light p-2 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-state">
-			<option value="1" {{ old('platform_id')=="1" ? 'selected' : '' }}>Facebook</option>
-			<option value="2" {{ old('platform_id')=="2" ? 'selected' : '' }}>Twitter</option>
-			<option value="3" {{ old('platform_id')=="3" ? 'selected' : '' }}>LinkedIn</option>
-			<option value="4" {{ old('platform_id')=="4" ? 'selected' : '' }}>Instagram</option>
+			<option value="1" {{ $project->platform_id=="1" ? 'selected' : '' }}>Facebook</option>
+			<option value="2" {{ $project->platform_id=="2" ? 'selected' : '' }}>Twitter</option>
+			<option value="3" {{ $project->platform_id=="3" ? 'selected' : '' }}>LinkedIn</option>
+			<option value="4" {{ $project->platform_id=="4" ? 'selected' : '' }}>Instagram</option>
 		</select>
         
 </div>
@@ -25,7 +25,7 @@
             name="title" 
             placeholder="My next awesome project"
             required
-            value="{{ old('title') }}">
+            value="{{ $project->title }}">
     </div>
 </div>
 
@@ -39,7 +39,7 @@
             name="url" 
             placeholder="http://wwww......"
             required
-            value="{{ old('url') }}">
+            value="{{ $project->url }}">
     </div>
 </div>
 
@@ -53,7 +53,7 @@
             name="start_date" 
             placeholder="00/00/0000"
             required
-            value="{{ old('start_date') }}">
+            value="{{ $project->start_date }}">
     </div>
 </div>
 
@@ -67,7 +67,7 @@
             name="end_date" 
             placeholder="00/00/0000"
             required
-            value="{{ old('end_date') }}">
+            value="{{ $project->end_date }}">
     </div>
 </div>
 
@@ -81,7 +81,7 @@
             rows="10" 
             class="textarea bg-transparent border border-grey-light rounded p-2 text-xs w-full"
             placeholder="Notes..."
-            required>{{ old('notes') }}</textarea>
+            required>{{ $project->notes }}</textarea>
     </div>
 </div>
 

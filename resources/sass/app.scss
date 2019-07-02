@@ -95,3 +95,16 @@ main{
  * @import "utilities/background-patterns";
  * @import "utilities/skew-transforms";
  */
+
+
+body{
+	line-height: 1.5;
+	font-size: .9em;
+	a{
+		color: #663763;
+		text-decoration: none;
+		&:hover{
+			text-decoration: underline;
+		}
+	}
+}

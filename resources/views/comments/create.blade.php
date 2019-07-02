@@ -3,16 +3,16 @@
 @section('content')
     <div class="lg:w-1/2 lg:mx-auto bg-white py-12 px-16 rounded shadow">
         <h1 class="text-2xl font-normal mb-10 text-center">
-            Edit Live Link
+            Add Comment
         </h1>
 
         <form 
             method="POST" 
-            action="{{ $project->path() }}"
+            action="/projects/{{ $project->id }}/comments/"
         >
-            @method('PATCH')
-            @include ('projects.form-edit', [
-                'buttonText' => 'Update Project'
+            @include ('comments.form', [
+                'project' => new App\Comment,
+                'buttonText' => 'Create'
             ])
         </form>
     </div>

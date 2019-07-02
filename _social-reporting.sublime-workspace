@@ -1,0 +1,238 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"Project",
+				"ProjectCreated"
+			],
+			[
+				"au",
+				"attributes"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 220.0,
+		"history":
+		[
+			"php artisan"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/davelincoln/Sites/social-reporting"
+	],
+	"file_history":
+	[
+		"/Users/davelincoln/Sites/master/resources/sass/app.scss",
+		"/Users/davelincoln/Sites/master/resources/js/app.js",
+		"/Users/davelincoln/Sites/master/resources/js/components/ExampleComponent.vue",
+		"/Users/davelincoln/Sites/master/app/Http/Controllers/ProjectsController.php",
+		"/Users/davelincoln/Sites/master/resources/views/projects/create.blade.php",
+		"/Users/davelincoln/Sites/master/routes/web.php",
+		"/Users/davelincoln/Sites/laravel-test/routes/web.php",
+		"/Users/davelincoln/Sites/laravel-test/app/Http/Controllers/ProjectsController.php",
+		"/Users/davelincoln/Sites/laravel-test/app/Policies/ProjectPolicy.php",
+		"/Users/davelincoln/Sites/laravel-test/app/Providers/AuthServiceProvider.php",
+		"/Users/davelincoln/Sites/laravel-test/resources/views/mail/project-created.blade.php",
+		"/Users/davelincoln/Sites/laravel-test/app/Mail/ProjectCreated.php",
+		"/Users/davelincoln/Sites/laravel-test/storage/logs/laravel-2019-06-27.log",
+		"/Users/davelincoln/Sites/laravel-test/resources/views/projects/edit.blade.php",
+		"/Users/davelincoln/Sites/laravel-test/app/User.php",
+		"/Users/davelincoln/Sites/laravel-test/.env",
+		"/Users/davelincoln/Sites/laravel-test/config/mail.php",
+		"/Users/davelincoln/Sites/laravel-test/config/telescope.php",
+		"/Users/davelincoln/Sites/laravel-test/database/migrations/2014_10_12_000000_create_users_table.php",
+		"/Users/davelincoln/Sites/laravel-test/database/migrations/2019_06_18_125614_create_projects_table.php",
+		"/Users/davelincoln/Sites/laravel-test/.env.example"
+	],
+	"find":
+	{
+		"height": 39.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 24.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "_social-reporting.sublime-project",
+	"replace":
+	{
+		"height": 44.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"project",
+				"app/Http/Controllers/ProjectsController.php"
+			],
+			[
+				"web",
+				"routes/web.php"
+			],
+			[
+				"projectCrea",
+				"app/Mail/ProjectCreated.php"
+			],
+			[
+				"projectCre",
+				"app/Mail/ProjectCreated.php"
+			],
+			[
+				".env",
+				".env"
+			],
+			[
+				"",
+				"app/Http/Controllers/ProjectsController.php"
+			],
+			[
+				"proj",
+				"app/Http/Controllers/ProjectsController.php"
+			],
+			[
+				"create_user",
+				"database/migrations/2014_10_12_000000_create_users_table.php"
+			],
+			[
+				"routes/web",
+				"routes/web.php"
+			],
+			[
+				"create_proje",
+				"database/migrations/2019_06_18_125614_create_projects_table.php"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 276.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

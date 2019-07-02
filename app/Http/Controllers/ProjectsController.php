@@ -44,7 +44,7 @@ class ProjectsController extends Controller
     }
 
     public function update(UpdateProjectRequest $form)
-    {    
+    {
         return redirect($form->save()->path());
     }
 
