@@ -4,13 +4,13 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Comment extends Model
+class Response extends Model
 {
     //use RecordsActivity;
 
     protected $guarded = [];
     
-    protected $touches = ['project', 'responses'];
+    protected $touches = ['project'];
 
 
     public function owner()
@@ -22,10 +22,11 @@ class Comment extends Model
     {
         return $this->belongsTo(Project::class);
     }
-    
-    public function responses()
+
+    public function comment()
     {
-        return $this->hasMany(Response::class);
+        return $this->belongsTo(Comment::class);
     }
+
 
 }

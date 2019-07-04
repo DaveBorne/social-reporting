@@ -25,6 +25,7 @@
 						<p class="mb-2 text-grey">Notes:</p><p>{{ $project->notes }}</p>
 					</div>
 					<a href="{{ $project->path() . '/edit' }}" class="button mt-2">Edit</a>
+
                 </div>
             </div>
 

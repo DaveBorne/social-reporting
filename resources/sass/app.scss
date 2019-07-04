@@ -59,6 +59,11 @@
     @apply bg-blue text-white no-underline rounded-lg text-sm py-2 px-5;
     //box-shadow: 0 2px 7px 0 #66374C;
     background: #663763;
+    &.is-danger{
+	    background-color: #ff3860;
+	    border-color: transparent;
+	    color: #fff;
+    }
 }
 
 .card {

@@ -8,7 +8,7 @@
 
         <form 
             method="POST" 
-            action="{{ $project->path() }}"
+            action="/campaigns/{{$campaign->id}}/projects/{{ $project->id }}"
         >
             @method('PATCH')
             @include ('projects.form-edit', [

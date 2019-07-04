@@ -28,6 +28,13 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
+    function campaigns()
+    {
+        //dd(1);
+        return $this->hasMany(Campaign::class, 'owner_id')->latest('updated_at');
+        dd(2);
+    }
+    
     function projects()
     {
         // return $this->hasMany(Project::class, 'owner_id')->orderBy('updated_at', 'desc');
@@ -39,4 +46,10 @@ class User extends Authenticatable
     {
         return $this->hasMany(Comment::class, 'owner_id')->latest('updated_at');
     }
+
+    function responses()
+    {
+        return $this->hasMany(Response::class, 'owner_id')->latest('updated_at');
+    }
+
 }

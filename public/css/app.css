@@ -594,6 +594,12 @@ table {
   background: #663763;
 }
 
+.button.is-danger {
+  background-color: #ff3860;
+  border-color: transparent;
+  color: #fff;
+}
+
 .card {
   background-color: #fff;
   padding: 1.25rem;

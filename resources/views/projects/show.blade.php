@@ -24,7 +24,15 @@
 						<p class="mb-4"><span class="text-grey">End Date:</span> {{ $project->end_date }}</p>
 						<p class="mb-2 text-grey">Notes:</p><p>{{ $project->notes }}</p>
 					</div>
-					<a href="{{ $project->path() . '/edit' }}" class="button mt-2">Edit</a>
+					<a href="/campaigns/{{$campaign->id}}/projects/{{ $project->id}}/edit" class="button mt-2">Edit</a>
+
+                    <form method="POST" action="/campaigns/{{$campaign->id}}/projects/{{ $project->id }}">
+                        @method('DELETE')
+                        @csrf
+                        <button type="submit" class="button is-danger mr-2" onclick="return confirm('Are you sure?');">Delete</button>
+                    </form>
+
+
                 </div>
             </div>
 
@@ -36,32 +44,7 @@
         <div class="lg:flex -mx-3">
             <div class="lg:w-full px-3 mb-6">
                 <div class="mb-8">
-                    <h2 class="text-lg text-grey font-normal mb-3">Comments</h2>
-
-                    {{-- tasks --}}
-                    @foreach ($project->tasks as $task)
-                        <div class="card mb-3">
-                            <form method="POST" action="{{ $task->path() }}">
-                                @method('PATCH')
-                                @csrf
-
-                                <div class="flex">
-                                    <input name="body" value="{{ $task->body }}" class="w-full {{ $task->completed ? 'text-grey' : '' }}">
-                                    <input name="completed" type="checkbox" onChange="this.form.submit()" {{ $task->completed ? 'checked' : '' }}>
-                                </div>
-                            </form>
-                        </div>
-                    @endforeach
-
-                    <div class="card mb-3">
-                        <form action="{{ $project->path() . '/tasks' }}" method="POST">
-                            @csrf
-							<div class="card mb-3">
-	                            <input placeholder="Add a new comment..." class="w-full" name="body">
-                            </div>
-                            <button type="submit" class="button">Add</button>
-                        </form>
-                    </div>
+                    <h2 class="text-lg text-grey font-normal mb-3">Comments</h2> <a href="/campaigns/{{$campaign->id}}/projects/{{ $project->id }}/comments" class="button">View Comments</a>
                 </div>
             </div>
         </div>

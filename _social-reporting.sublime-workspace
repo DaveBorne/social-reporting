@@ -15,6 +15,24 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "app/Http/Controllers/ProjectsController.php",
+			"settings":
+			{
+				"buffer_size": 1575,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/Http/Requests/UpdateProjectRequest.php",
+			"settings":
+			{
+				"buffer_size": 1972,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -49,10 +67,61 @@
 	},
 	"expanded_folders":
 	[
-		"/Users/davelincoln/Sites/social-reporting"
+		"/Users/davelincoln/Sites/social-reporting",
+		"/Users/davelincoln/Sites/social-reporting/app",
+		"/Users/davelincoln/Sites/social-reporting/app/Console",
+		"/Users/davelincoln/Sites/social-reporting/app/Exceptions",
+		"/Users/davelincoln/Sites/social-reporting/app/Http",
+		"/Users/davelincoln/Sites/social-reporting/app/Http/Controllers",
+		"/Users/davelincoln/Sites/social-reporting/app/Http/Requests",
+		"/Users/davelincoln/Sites/social-reporting/app/Observers",
+		"/Users/davelincoln/Sites/social-reporting/app/Policies",
+		"/Users/davelincoln/Sites/social-reporting/app/Providers",
+		"/Users/davelincoln/Sites/social-reporting/database",
+		"/Users/davelincoln/Sites/social-reporting/database/migrations",
+		"/Users/davelincoln/Sites/social-reporting/database/seeds",
+		"/Users/davelincoln/Sites/social-reporting/public",
+		"/Users/davelincoln/Sites/social-reporting/public/css",
+		"/Users/davelincoln/Sites/social-reporting/resources",
+		"/Users/davelincoln/Sites/social-reporting/resources/views",
+		"/Users/davelincoln/Sites/social-reporting/resources/views/comments",
+		"/Users/davelincoln/Sites/social-reporting/resources/views/layouts",
+		"/Users/davelincoln/Sites/social-reporting/resources/views/projects",
+		"/Users/davelincoln/Sites/social-reporting/routes",
+		"/Users/davelincoln/Sites/social-reporting/storage",
+		"/Users/davelincoln/Sites/social-reporting/storage/app",
+		"/Users/davelincoln/Sites/social-reporting/storage/app/public",
+		"/Users/davelincoln/Sites/social-reporting/storage/framework"
 	],
 	"file_history":
 	[
+		"/Users/davelincoln/Sites/social-reporting/resources/views/comments/index.blade.php",
+		"/Users/davelincoln/Sites/social-reporting/app/Http/Controllers/CommentsController.php",
+		"/Users/davelincoln/Sites/social-reporting/resources/views/comments/edit.blade.php",
+		"/Users/davelincoln/Sites/social-reporting/resources/views/comments/form-edit.blade.php",
+		"/Users/davelincoln/Sites/social-reporting/app/User.php",
+		"/Users/davelincoln/Sites/social-reporting/app/Comment.php",
+		"/Users/davelincoln/Sites/social-reporting/app/Http/Controllers/ResponsesController.php",
+		"/Users/davelincoln/Sites/social-reporting/app/Response.php",
+		"/Users/davelincoln/Sites/social-reporting/database/migrations/2019_09_09_074823_create_responses_table.php",
+		"/Users/davelincoln/Sites/social-reporting/app/Http/Middleware/RedirectIfAuthenticated.php",
+		"/Users/davelincoln/Sites/social-reporting/app/Http/Requests/UpdateResponseRequest.php",
+		"/Users/davelincoln/Sites/social-reporting/database/migrations/2019_07_26_100953_create_comments_table.php",
+		"/Users/davelincoln/Sites/social-reporting/app/Policies/ResponsePolicy.php",
+		"/Users/davelincoln/Sites/social-reporting/app/Providers/AuthServiceProvider.php",
+		"/Users/davelincoln/Sites/social-reporting/resources/views/comments/create.blade.php",
+		"/Users/davelincoln/Sites/social-reporting/app/Project.php",
+		"/Users/davelincoln/Sites/social-reporting/resources/views/comments/form.blade.php",
+		"/Users/davelincoln/Sites/social-reporting/resources/views/projects/show.blade.php",
+		"/Users/davelincoln/Sites/social-reporting/routes/web.php",
+		"/Users/davelincoln/Sites/social-reporting/app/Http/Controllers/ProjectsController.php",
+		"/Users/davelincoln/Sites/social-reporting/app/Policies/CommentPolicy.php",
+		"/Users/davelincoln/Sites/social-reporting/resources/views/comments/show.blade.php",
+		"/Users/davelincoln/Sites/social-reporting/app/Policies/ProjectPolicy.php",
+		"/Users/davelincoln/Sites/social-reporting/app/Http/Requests/UpdateCommentRequest.php",
+		"/Users/davelincoln/Sites/social-reporting/app/Http/Controllers/ProjectTasksController.php",
+		"/Users/davelincoln/Sites/social-reporting/app/Task.php",
+		"/Users/davelincoln/Sites/social-reporting/resources/views/projects/card.blade.php",
 		"/Users/davelincoln/Sites/master/resources/sass/app.scss",
 		"/Users/davelincoln/Sites/master/resources/js/app.js",
 		"/Users/davelincoln/Sites/master/resources/js/components/ExampleComponent.vue",
@@ -77,13 +146,18 @@
 	],
 	"find":
 	{
-		"height": 39.0
+		"height": 51.0
 	},
 	"find_in_files":
 	{
-		"height": 0.0,
+		"height": 101.0,
 		"where_history":
 		[
+			"/Users/davelincoln/Sites/social-reporting",
+			"/Users/davelincoln/Sites/social-reporting/app",
+			"/Users/davelincoln/Sites/social-reporting",
+			"/Users/davelincoln/Sites/social-reporting/app/Http",
+			"/Users/davelincoln/Sites/social-reporting/app/Http/Middleware"
 		]
 	},
 	"find_state":
@@ -91,6 +165,31 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"Add new response\n",
+			"path()",
+			"Project::create",
+			"pro",
+			"proj",
+			"proje",
+			"projec",
+			"project_id",
+			"comment",
+			"Comment",
+			"start_date",
+			"created_at",
+			"comments()",
+			"Comm",
+			"comment",
+			"Comment",
+			"Project",
+			"Pro",
+			"projec",
+			"authorize",
+			"project",
+			"$project",
+			"comments",
+			"$touches",
+			"project"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -98,6 +197,11 @@
 		"regex": false,
 		"replace_history":
 		[
+			"response",
+			"Reponse",
+			"response",
+			"Response",
+			"$comment"
 		],
 		"reverse": false,
 		"show_context": true,
@@ -108,8 +212,69 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "app/Http/Controllers/ProjectsController.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1575,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								379,
+								379
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 167.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "app/Http/Requests/UpdateProjectRequest.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1972,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1950,
+								1959
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 257.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -119,7 +284,7 @@
 	},
 	"input":
 	{
-		"height": 0.0
+		"height": 36.0
 	},
 	"layout":
 	{
@@ -152,7 +317,7 @@
 	"project": "_social-reporting.sublime-project",
 	"replace":
 	{
-		"height": 44.0
+		"height": 94.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -230,7 +395,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 276.0,
+	"side_bar_width": 381.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

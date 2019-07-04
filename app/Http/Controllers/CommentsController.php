@@ -4,75 +4,71 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use App\Comment;
-use App\Comments;
+use App\Campaign;
 use App\Project;
-use App\Projects;
+use App\Comment;
+
 use App\Http\Requests\UpdateCommentRequest;
 
 class CommentsController extends Controller
 {
-    public function index(Project $project)
+    public function index(Campaign $campaign, Project $project)
+    {	    
+
+        $comments = Comment::where('project_id', '=', $project->id)->orderBy('created_at', 'DESC')->get();
+
+        return view('comments.index', compact('campaign', 'project', 'comments'));   
+    }
+
+    public function show(Campaign $campaign, Project $project)
     {
-	    
-	    //dd($project);
-	    
-        $comments = auth()->user()->comments;
+        $comments = Comment::where('project_id', '=', $project->id)->orderBy('created_at', 'DESC')->get();
 
-        return view('comments.index', compact('comments', 'project'));   
+        return view('comments.index', compact('campaign', 'project', 'comments'));   
     }
 
-    public function show(Comment $comment)
-    {    
-        $this->authorize('update', $comment);
 
-        return view('comments.show', compact('comment'));
-    }
-
-    public function create(Project $project)
+        public function create(Campaign $campaign, Project $project)
     {
-        return view('comments.create', compact('comments', 'project'));
+        return view('comments.create', compact('campaign', 'project', 'comments'));
     }
 
-    public function store(Project $project)
+    public function store(Campaign $campaign, Project $project)
     {
 	    
 	    $attributes = $this->validateRequest();
 	    $attributes['project_id'] = $project->id;
+        $attributes['campaign_id'] = $campaign->id;
 	    
         $comment = auth()->user()->comments()->create($attributes);
-
-        // redirect   
-        return redirect($comment->path());
+        return redirect('campaigns/'.$campaign->id.'/projects/'.$project->id.'/comments/');
     }
 
-    public function edit(Comment $comment)
+    public function edit(Campaign $campaign, Project $project, Comment $comment)
     {
-        return view('comments.edit', compact('comment'));
+        return view('comments.edit', compact('campaign', 'project', 'comment'));
     }
 
-    public function update(UpdateCommentRequest $form)
+    public function update(Campaign $campaign, Project $project, Comment $comment)
     {
-        return redirect($form->save()->path());
+        $commentUpdated = $comment->update($this->validateRequest());
+        //return redirect($project->path());
+        return redirect('campaigns/'.$campaign->id.'/projects/'.$project->id.'/comments/');
     }
 
-    public function destroy(Comment $comment)
+    public function destroy(Campaign $campaign, Project $project, Comment $comment)
     {
         $this->authorize('update', $comment);
-
         $comment->delete();
-
-        return redirect('/comments');
+        return redirect('campaigns/'.$campaign->id.'/projects/'.$project->id.'/comments/');
     }
 
     protected function validateRequest()
     {
         return request()->validate([
-            'platform_id' => 'required|min:1|max:1', 
-            'title' => 'required|min:3', 
-            'url' => 'required|url', 
-            'start_date' => 'required|min:1', 
-            'end_date' => 'required|min:1', 
+            'content' => 'required|min:3', 
+            'sentiment_id' => 'required|min:1|max:1', 
+            'action_id' => 'required|min:1|max:1',  
             'notes' => 'nullable|min:3'
         ]);
     }

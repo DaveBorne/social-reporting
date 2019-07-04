@@ -2,11 +2,12 @@
 
 namespace App\Http\Requests;
 
+use App\Reponse;
 use App\Project;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Support\Facades\Gate;
 
-class UpdateProjectRequest extends FormRequest
+class UpdateReponseRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -16,7 +17,7 @@ class UpdateProjectRequest extends FormRequest
     public function authorize()
     {
         // return Gate::allows('update', $this->route('project'));
-        return Gate::allows('update', $this->project());
+        return Gate::allows('update', $this->response());
     }
 
     /**
@@ -36,7 +37,7 @@ class UpdateProjectRequest extends FormRequest
         ];
     }
 
-    public function project()
+    public function response()
     {
         // return $this->route('project');
 
@@ -48,7 +49,7 @@ class UpdateProjectRequest extends FormRequest
         // `Project::findOrFail($this->route('project'))` will return array
         // if not, `$this->route('project')` will be "1" (the id of table projects)
         // and `Project::findOrFail($this->route('project'))` will be an object of database collection
-        return Project::findOrFail($this->route('project'));
+        return Reponse::findOrFail($this->route('response'));
     }
 
     public function save()
@@ -61,6 +62,6 @@ class UpdateProjectRequest extends FormRequest
 
         // return $project;
 
-        return tap($this->project())->update($this->validated());
+        return tap($this->response())->update($this->validated());
     }
 }

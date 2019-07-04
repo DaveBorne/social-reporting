@@ -4,9 +4,8 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Project extends Model
+class Campaign extends Model
 {
-    use RecordsActivity;
 
     protected $guarded = [];
 
@@ -15,7 +14,7 @@ class Project extends Model
     
     public function path()
     {
-        return "/projects/{$this->id}";
+        return "/campaigns";
     }
 
     public function owner()
@@ -23,9 +22,9 @@ class Project extends Model
         return $this->belongsTo(User::class);
     }
 
-    public function campaign()
+    public function project()
     {
-        return $this->belongsTo(Campaign::class);
+        return $this->hasMany(Project::class);
     }
 
     public function comments()

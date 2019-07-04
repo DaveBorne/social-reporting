@@ -4,57 +4,72 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Campaign;
 use App\Project;
+
 use App\Http\Requests\UpdateProjectRequest;
 
 class ProjectsController extends Controller
 {
-    public function index()
+    public function index(Campaign $campaign)
     {
-        $projects = auth()->user()->projects;
+        
+        //$projects = Project::all();
+        $projects = Project::where('campaign_id', '=', $campaign->id)->orderBy('created_at', 'DESC')->get();
 
-        return view('projects.index', compact('projects'));   
+        return view('projects.index', compact('campaign', 'projects'));   
     }
 
-    public function show(Project $project)
-    {    
-        $this->authorize('update', $project);
+    public function show(Campaign $campaign, Project $project)
+    {   
+        //$this->authorize('update', $project);
 
-        return view('projects.show', compact('project'));
+        return view('projects.show', compact('campaign', 'project'));
     }
 
-    public function create()
+    public function create(Campaign $campaign)
     {
-        return view('projects.create');
+        return view('projects.create', compact('campaign'));
     }
 
-    public function store()
+    public function store(Campaign $campaign)
     {
-        // validate
-        // persist
-        $project = auth()->user()->projects()->create($this->validateRequest());
+
+        $attributes = $this->validateRequest();
+        $attributes['campaign_id'] = $campaign->id;
+        
+        $comment = auth()->user()->projects()->create($attributes);
+
 
         // redirect   
-        return redirect($project->path());
+        return redirect('/campaigns/'.$campaign->id.'/projects/');
     }
 
-    public function edit(Project $project)
+    public function edit(Campaign $campaign, Project $project)
     {
-        return view('projects.edit', compact('project'));
+        return view('projects.edit', compact('campaign', 'project'));
     }
 
-    public function update(UpdateProjectRequest $form)
+    public function update(Campaign $campaign, Project $project)
     {
-        return redirect($form->save()->path());
+
+        //$updateProject = $this->validateRequest();
+        $projectUpdated = $project->update($this->validateRequest());
+        return redirect('/campaigns/'.$campaign->id.'/projects/'.$project->id);
+
+        //dd(1);
+        //$project = auth()->user()->projects()->save($this->validateRequest());
+        //dd(1);
+        //return redirect($form->save()->path());
     }
 
-    public function destroy(Project $project)
+    public function destroy(Campaign $campaign, Project $project)
     {
         $this->authorize('update', $project);
 
         $project->delete();
 
-        return redirect('/projects');
+        return redirect('/campaigns/'.$campaign->id.'/projects/');
     }
 
     protected function validateRequest()

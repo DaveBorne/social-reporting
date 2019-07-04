@@ -24,13 +24,25 @@ Route::group(['middleware' => 'auth'], function () {
     // Route::post('/projects', 'ProjectsController@store');
     // Route::delete('/projects/{project}', 'ProjectsController@destroy');
 
-    Route::resource('projects', 'ProjectsController');
+    Route::resource('campaigns', 'CampaignsController');
 
-    Route::resource('/projects/{project}/comments', 'CommentsController');
+    Route::resource('/campaigns/{campaign}/projects', 'ProjectsController');
 
 
-    Route::post('/projects/{project}/tasks', 'ProjectTasksController@store');
-    Route::patch('/projects/{project}/tasks/{task}', 'ProjectTasksController@update');
+
+
+
+
+
+
+    Route::resource('/campaigns/{campaign}/projects/{project}/comments', 'CommentsController');
+    Route::patch('/campaigns/{campaign}/projects/{project}/comments/{comment}', 'CommentsController@update');
+
+    Route::resource('/campaigns/{campaign}/projects/{project}/comments/{comment}/responses', 'ResponsesController');
+    Route::patch('/campaigns/{campaign}/projects/{project}/comments/{comment}/responses/{responses}', 'ResponsesController@update');
+
+    //Route::post('/projects/{project}/tasks', 'ProjectTasksController@store');
+    //Route::patch('/projects/{project}/tasks/{task}', 'ProjectTasksController@update');
     // Route::patch('/tasks/{task}', 'ProjectTasksController@update');
 
     Route::get('/home', 'HomeController@index')->name('home');

@@ -6,10 +6,10 @@
     <div class="control">
 	    
 		<select name="platform_id" class="block appearance-none w-full bg-transparent border border-grey-light p-2 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-state">
-			<option value="1" {{ $project->platform_id=="1" ? 'selected' : '' }}>Facebook</option>
-			<option value="2" {{ $project->platform_id=="2" ? 'selected' : '' }}>Twitter</option>
-			<option value="3" {{ $project->platform_id=="3" ? 'selected' : '' }}>LinkedIn</option>
-			<option value="4" {{ $project->platform_id=="4" ? 'selected' : '' }}>Instagram</option>
+			<option value="1" {{ $campaign->platform_id=="1" ? 'selected' : '' }}>Facebook</option>
+			<option value="2" {{ $campaign->platform_id=="2" ? 'selected' : '' }}>Twitter</option>
+			<option value="3" {{ $campaign->platform_id=="3" ? 'selected' : '' }}>LinkedIn</option>
+			<option value="4" {{ $campaign->platform_id=="4" ? 'selected' : '' }}>Instagram</option>
 		</select>
         
 </div>
@@ -23,9 +23,9 @@
             type="text" 
             class="input bg-transparent border border-grey-light rounded p-2 text-xs w-full" 
             name="title" 
-            placeholder="My next awesome project"
+            placeholder="My next awesome campaign"
             required
-            value="{{ $project->title }}">
+            value="{{ $campaign->title }}">
     </div>
 </div>
 
@@ -39,7 +39,7 @@
             name="url" 
             placeholder="http://wwww......"
             required
-            value="{{ $project->url }}">
+            value="{{ $campaign->url }}">
     </div>
 </div>
 
@@ -53,7 +53,7 @@
             name="start_date" 
             placeholder="00/00/0000"
             required
-            value="{{ $project->start_date }}">
+            value="{{ $campaign->start_date }}">
     </div>
 </div>
 
@@ -67,7 +67,7 @@
             name="end_date" 
             placeholder="00/00/0000"
             required
-            value="{{ $project->end_date }}">
+            value="{{ $campaign->end_date }}">
     </div>
 </div>
 
@@ -81,14 +81,14 @@
             rows="10" 
             class="textarea bg-transparent border border-grey-light rounded p-2 text-xs w-full"
             placeholder="Notes..."
-            required>{{ $project->notes }}</textarea>
+            required>{{ $campaign->notes }}</textarea>
     </div>
 </div>
 
 <div class="field">
     <div class="control">
         <button type="submit" class="button is-link mr-2">{{ $buttonText }}</button>
-        <a href="{{ $project->path() }}">Cancel</a>
+        <a href="{{ $campaign->path() }}">Cancel</a>
     </div>
 </div>
 

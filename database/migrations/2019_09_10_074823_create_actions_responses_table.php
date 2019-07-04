@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateProjectsTable extends Migration
+class CreateActionsResponsesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,16 @@ class CreateProjectsTable extends Migration
      */
     public function up()
     {
-        Schema::create('projects', function (Blueprint $table) {
+        Schema::create('actions_responses', function (Blueprint $table) {
             $table->increments('id');
-            $table->unsignedInteger('campaign_id');
+
+            $table->unsignedInteger('comment_id');
+            $table->unsignedInteger('response_id')->nullable();
+
+            $table->integer('action_id');
+            $table->text('action_notes')->nullable();
+
             $table->unsignedInteger('owner_id');
-            $table->unsignedInteger('platform_id');
-            $table->string('title');
-            $table->string('url');
             $table->string('start_date');
             $table->string('end_date');
             
@@ -28,7 +31,8 @@ class CreateProjectsTable extends Migration
             $table->text('notes')->nullable();
             $table->timestamps();
 
-            $table->foreign('campaign_id')->references('id')->on('campaigns')->onDelete('cascade');
+            $table->foreign('comment_id')->references('id')->on('comments')->onDelete('cascade');
+            $table->foreign('response_id')->references('id')->on('responses')->onDelete('cascade');
             $table->foreign('owner_id')->references('id')->on('users')->onDelete('cascade');
         });
     }
@@ -40,6 +44,6 @@ class CreateProjectsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('projects');
+        Schema::dropIfExists('actions_responses');
     }
 }
